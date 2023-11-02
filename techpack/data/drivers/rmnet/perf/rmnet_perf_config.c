@@ -141,7 +141,7 @@ rmnet_perf_config_free_resources(struct rmnet_perf *perf)
 	rmnet_perf_core_free_held_skbs();
 
 	/* Clean up any remaining nodes in the flow table before freeing */
-	rmnet_perf_free_hash_table();
+	rmnet_perf_free_hash_table(void);
 
 	/* Since we allocated in one chunk, we will also free in one chunk */
 	kfree(perf);
